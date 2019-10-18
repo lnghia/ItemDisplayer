@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Data from './Untitled-1.json';
+import './ItemDisplayer';
+import ItemDisplayer from './ItemDisplayer';
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+    return(
+        <div className="app">
+            <ItemDisplayer item={Data[0]} />
+            <ItemDisplayer item={Data[1]} />
+            <ItemDisplayer item={Data[2]} />
+            <ItemDisplayer item={Data[3]} />
+            <ItemDisplayer item={Data[4]} />
+        </div>
+    );
 }
 
 export default App;
